@@ -33,5 +33,39 @@ sudo chmod -R +x /opt/tomcat/bin
 sudo -u tomcat /opt/tomcat/bin/startup.sh
 ```
 
+### 6. Enable Tomcat Manager (For Jenkins)
+Jenkins needs a "manager-script" user to deploy your code.
+Run this command:
+```bash
+sudo nano /opt/tomcat/conf/tomcat-users.xml
+```
+Add this before the `</tomcat-users>` line:
+```xml
+<role rolename="manager-gui"/>
+<role rolename="manager-script"/>
+<user username="admin" password="password" roles="manager-gui,manager-script"/>
+```
+
+### 7. Allow Remote Access
+By default, Tomcat blocks external computers from the Manager UI. Run these two commands to allow Jenkins:
+
+**Manager App:**
+```bash
+sudo sed -i 's/<Valve /<!-- <Valve /' /opt/tomcat/webapps/manager/META-INF/context.xml
+sudo sed -i 's/remoteAddrValve" \/>/remoteAddrValve" \/> -->/' /opt/tomcat/webapps/manager/META-INF/context.xml
+```
+
+**Host Manager App:**
+```bash
+sudo sed -i 's/<Valve /<!-- <Valve /' /opt/tomcat/webapps/host-manager/META-INF/context.xml
+sudo sed -i 's/remoteAddrValve" \/>/remoteAddrValve" \/> -->/' /opt/tomcat/webapps/host-manager/META-INF/context.xml
+```
+
+### 8. Restart Tomcat
+```bash
+sudo -u tomcat /opt/tomcat/bin/shutdown.sh
+sudo -u tomcat /opt/tomcat/bin/startup.sh
+```
+
 > [!NOTE]
 > Ensure Port **8080** is open in your AWS Security Group.

@@ -14,7 +14,8 @@ sudo apt install ansible -y
 
 ### 2. Setup Admin User (ansadmin)
 ```bash
-sudo useradd ansadmin
+# Create user with home directory and bash shell
+sudo useradd -m -s /bin/bash ansadmin
 sudo passwd ansadmin
 echo "ansadmin ALL=(ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/ansadmin
 ```
@@ -34,3 +35,24 @@ ssh-keygen -t rsa
 
 > [!IMPORTANT]
 > Use `ssh-copy-id ansadmin@<Target-IP>` to trust your target nodes.
+
+---
+
+### 🛡️ Troubleshooting "Access Denied" or Permission Errors
+
+If `ssh-copy-id` fails, run these fix commands **on the Target Node** (not the Ansible server):
+
+#### **1. Missing Home Directory Fix**
+If you see "can't cd to /home/ansadmin":
+```bash
+sudo mkdir -p /home/ansadmin
+sudo chown ansadmin:ansadmin /home/ansadmin
+```
+
+#### **2. SSH Config Overrides Fix**
+Ubuntu often has extra config files blocking passwords. Force them to allow it:
+```bash
+sudo sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
+sudo sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config.d/*.conf
+sudo systemctl restart ssh
+```
