@@ -38,6 +38,44 @@ ssh-keygen -t rsa
 
 ---
 
+### 🚀 Stage 3: Docker Automation with Ansible
+
+Follow these steps on your **Ansible Control Node** to automate the Docker deployment.
+
+#### **1. Install Required Ansible Collections**
+Ansible needs a specific module to talk to Docker:
+```bash
+ansible-galaxy collection install community.docker
+```
+
+#### **2. Prepare the Docker Host (Target Node)**
+Ansible uses Python to manage Docker. Run this **on the Docker Host**:
+```bash
+sudo apt update
+sudo apt install python3-pip -y
+pip3 install docker
+```
+
+#### **3. Create/Update Inventory**
+Ensure your Docker Host is listed in `/etc/ansible/hosts`:
+```bash
+sudo vi /etc/ansible/hosts
+```
+Add (if not there):
+```ini
+[dockerhost]
+<Your-Docker-Host-IP>
+```
+
+#### **4. Execute the Playbook**
+Go to your project folder and run:
+```bash
+cd ~/simple-project-2/code
+ansible-playbook -i /etc/ansible/hosts deploy_app.yml
+```
+
+---
+
 ### 🛡️ Troubleshooting "Access Denied" or Permission Errors
 
 If `ssh-copy-id` fails, run these fix commands **on the Target Node** (not the Ansible server):
