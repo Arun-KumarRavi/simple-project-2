@@ -6,7 +6,7 @@
   tasks:
     - name: Stop existing container
       docker_container:
-        name: my-webapp
+        name: my-app
         state: absent
       ignore_errors: yes
 
@@ -17,7 +17,7 @@
 
     - name: Run new container
       docker_container:
-        name: my-webapp
+        name: my-app
         image: "arunkumarravi08/hello-world:latest"
         state: started
         published_ports:
