@@ -194,9 +194,12 @@
             <div class="stage-details">
                 <p><strong>Next steps:</strong></p>
                 <ul>
-                    <li>Setup AWS EKS cluster</li>
-                    <li>Create Kubernetes deployment and service manifests</li>
-                    <li>Deploy containerized app to Kubernetes</li>
+                    <li><strong>EKS Cluster Creation:</strong> Provisioning a multi-node managed cluster on AWS</li>
+                    <li><strong>Tooling Setup:</strong> Configuring eksctl and kubectl for cluster management</li>
+                    <li><strong>Resource Deployment:</strong> Deploying the Go-Live manifests (Deployments &
+                        LoadBalancer)</li>
+                    <li><strong>Scaling & Healing:</strong> Verifying automatic high-availability across multiple zones
+                    </li>
                 </ul>
             </div>
         </div>
