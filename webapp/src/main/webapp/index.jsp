@@ -107,7 +107,7 @@
 
 <body>
     <div class="container">
-        <h1>🚀 DevOps Pipeline - Stage Progress</h1>
+        <h1>🚀 DevOps Pipeline - Stage Progress <small>(v3.0 - Ansible Live)</small></h1>
 
         <!-- Stage 1: COMPLETED -->
         <div class="stage">
