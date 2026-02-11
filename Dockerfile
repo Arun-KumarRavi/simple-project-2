@@ -6,10 +6,11 @@ COPY webapp/src ./src
 RUN mvn clean package
 
 # Step 2: Deploy to Tomcat
-FROM tomcat:9.0-jdk11-openjdk-slim
-# Clean default webapps to avoid conflicts
+# Using Temurin-based image which has better cgroup v2 support
+FROM tomcat:9.0-jdk11-temurin
+# Clean default webapps
 RUN rm -rf /usr/local/tomcat/webapps/*
-# Copy war as hello-world.war
+# Copy war
 COPY --from=build /app/target/hello-world.war /usr/local/tomcat/webapps/hello-world.war
 
 EXPOSE 8080
