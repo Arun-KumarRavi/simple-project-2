@@ -132,23 +132,30 @@
                         all target nodes</li>
                 </ul>
                 <p><strong>Result:</strong> Application is live at
-                    <code>http://&lt;Tomcat-IP&gt;:8080/hello-world/</code></p>
+                    <code>http://&lt;Tomcat-IP&gt;:8080/hello-world/</code>
+                </p>
             </div>
         </div>
 
-        <!-- Stage 2: PENDING -->
-        <div class="stage pending">
+        <!-- Stage 2: COMPLETED -->
+        <div class="stage">
             <div class="stage-header">
                 <div class="stage-number">2</div>
                 <div class="stage-title">Docker Containerization</div>
-                <span class="status-badge pending">PENDING</span>
+                <span class="status-badge">✓ COMPLETED</span>
             </div>
             <div class="stage-details">
-                <p><strong>Next steps:</strong></p>
+                <p><strong>What we accomplished:</strong></p>
                 <ul>
-                    <li>Build Docker image from WAR file using Dockerfile</li>
-                    <li>Push image to Docker Hub registry</li>
-                    <li>Run containerized application on Docker host</li>
+                    <li><strong>Dockerfile Creation:</strong> Created multi-stage Dockerfile for optimized building and
+                        deployment</li>
+                    <li><strong>Jenkins Integration:</strong> Added Docker build, tag, and push steps to the CI/CD
+                        pipeline</li>
+                    <li><strong>Docker Hub:</strong> Successfully pushed versioned and 'latest' images to Docker Hub
+                    </li>
+                    <li><strong>Manual Deployment:</strong> Verified container execution on the Docker Host server</li>
+                    <li><strong>Tomcat optimization:</strong> Fixed deployment conflicts by cleaning the webapps
+                        directory in the Docker image</li>
                 </ul>
             </div>
         </div>
