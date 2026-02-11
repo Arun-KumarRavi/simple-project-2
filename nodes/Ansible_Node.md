@@ -52,8 +52,7 @@ ansible-galaxy collection install community.docker
 Ansible uses Python to manage Docker. Run this **on the Docker Host**:
 ```bash
 sudo apt update
-sudo apt install python3-pip -y
-pip3 install docker
+sudo apt install python3-docker -y
 ```
 
 #### **3. Create/Update Inventory**
