@@ -160,19 +160,26 @@
             </div>
         </div>
 
-        <!-- Stage 3: PENDING -->
-        <div class="stage pending">
+        <!-- Stage 3: COMPLETED -->
+        <div class="stage">
             <div class="stage-header">
                 <div class="stage-number">3</div>
                 <div class="stage-title">Ansible Automation</div>
-                <span class="status-badge pending">PENDING</span>
+                <span class="status-badge">✓ COMPLETED</span>
             </div>
             <div class="stage-details">
-                <p><strong>Next steps:</strong></p>
+                <p><strong>What we accomplished:</strong></p>
                 <ul>
-                    <li>Create Ansible playbook for Docker deployment</li>
-                    <li>Automate container lifecycle management</li>
-                    <li>Deploy application using Ansible from Jenkins</li>
+                    <li><strong>Inventory Management:</strong> Configured centralized inventory for managing multi-node
+                        deployment</li>
+                    <li><strong>Playbook Automation:</strong> Created YAML playbooks to manage container lifecycle
+                        (Stop, Pull, Run)</li>
+                    <li><strong>Python-Docker Bridge:</strong> Configured Python dependencies on target nodes for
+                        Ansible-Docker communication</li>
+                    <li><strong>One-Click Deployment:</strong> Verified that deployment can be triggered from a central
+                        control node without manual server access</li>
+                    <li><strong>CI/CD Readiness:</strong> Prepared the foundation for Jenkins to trigger Ansible
+                        automatically</li>
                 </ul>
             </div>
         </div>
