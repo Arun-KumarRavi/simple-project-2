@@ -12,13 +12,13 @@
 
     - name: Pull latest image from Docker Hub
       docker_image:
-        name: "arunkumarravi/hello-world:latest"
+        name: "arunkumarravi08/hello-world:latest"
         source: pull
 
     - name: Run new container
       docker_container:
         name: my-webapp
-        image: "arunkumarravi/hello-world:latest"
+        image: "arunkumarravi08/hello-world:latest"
         state: started
         published_ports:
           - "8080:8080"
