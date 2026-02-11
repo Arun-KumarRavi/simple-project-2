@@ -184,32 +184,36 @@
             </div>
         </div>
 
-        <!-- Stage 4: PENDING -->
-        <div class="stage pending">
+        <!-- Stage 4: COMPLETED -->
+        <div class="stage">
             <div class="stage-header">
                 <div class="stage-number">4</div>
                 <div class="stage-title">Kubernetes Orchestration</div>
-                <span class="status-badge pending">PENDING</span>
+                <span class="status-badge">✓ COMPLETED</span>
             </div>
             <div class="stage-details">
-                <p><strong>Next steps:</strong></p>
+                <p><strong>Final Mission Accomplished:</strong></p>
                 <ul>
-                    <li><strong>EKS Cluster Creation:</strong> Provisioning a multi-node managed cluster on AWS</li>
-                    <li><strong>Tooling Setup:</strong> Configuring eksctl and kubectl for cluster management</li>
-                    <li><strong>Resource Deployment:</strong> Deploying the Go-Live manifests (Deployments &
-                        LoadBalancer)</li>
-                    <li><strong>Scaling & Healing:</strong> Verifying automatic high-availability across multiple zones
-                    </li>
+                    <li><strong>EKS Cluster Creation:</strong> Successfully provisioned a managed AWS EKS cluster with 2
+                        worker nodes</li>
+                    <li><strong>Cluster Management:</strong> Configured <code>kubectl</code> and <code>eksctl</code> for
+                        professional orchestration</li>
+                    <li><strong>High Availability:</strong> Deployed 3 replicas of the application across multiple
+                        availability zones</li>
+                    <li><strong>Load Balancing:</strong> Exposed the application via an AWS Classic LoadBalancer</li>
+                    <li><strong>Self-Healing:</strong> Configured liveness and readiness checks for automated container
+                        recovery</li>
                 </ul>
             </div>
         </div>
+    </div>
 
-        <div class="footer">
-            <p><strong>Project:</strong> Complete CI/CD Pipeline Implementation</p>
-            <p><strong>Build Time:</strong>
-                <%= new java.util.Date() %>
-            </p>
-        </div>
+    <div class="footer">
+        <p><strong>Project:</strong> Complete CI/CD Pipeline Implementation</p>
+        <p><strong>Build Time:</strong>
+            <%= new java.util.Date() %>
+        </p>
+    </div>
     </div>
 </body>
 
