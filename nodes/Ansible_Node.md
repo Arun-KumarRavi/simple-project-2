@@ -75,6 +75,18 @@ ansible-playbook -i /etc/ansible/hosts deploy_app.yml
 
 ---
 
+### 🏆 **The "Gold Standard" Automation Flow (Stage 3)**
+If you want to run this from scratch next time without any errors, here is the perfect sequence:
+
+| Node | Action | Command |
+| :--- | :--- | :--- |
+| **Ansible Node** | Install Docker Module | `ansible-galaxy collection install community.docker` |
+| **Docker Host** | Install Python Bridge | `sudo apt update && sudo apt install python3-docker -y` |
+| **Docker Host** | Fix Permissions | `sudo usermod -aG docker ansadmin` |
+| **Ansible Node** | Run Automation | `ansible-playbook -i /etc/ansible/hosts deploy_app.yml` |
+
+---
+
 ### 🛡️ Troubleshooting "Access Denied" or Permission Errors
 
 If `ssh-copy-id` fails, run these fix commands **on the Target Node** (not the Ansible server):
