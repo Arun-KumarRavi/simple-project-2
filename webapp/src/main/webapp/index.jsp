@@ -109,100 +109,70 @@
     <div class="container">
         <h1>🚀 DevOps Pipeline - Stage Progress <small>(v3.0 - Ansible Live)</small></h1>
 
-        <!-- Stage 1: COMPLETED -->
-        <div class="stage">
+        <!-- Stage 1: PENDING -->
+        <div class="stage pending">
             <div class="stage-header">
                 <div class="stage-number">1</div>
                 <div class="stage-title">Maven Build & Tomcat Deployment</div>
-                <span class="status-badge">✓ COMPLETED</span>
+                <span class="status-badge pending">PENDING</span>
             </div>
             <div class="stage-details">
-                <p><strong>What we accomplished:</strong></p>
+                <p><strong>Next steps:</strong></p>
                 <ul>
-                    <li><strong>Infrastructure Setup:</strong> Configured 4 Ubuntu EC2 instances (Jenkins, Tomcat,
-                        Ansible, Docker)</li>
-                    <li><strong>Jenkins Configuration:</strong> Installed plugins (Maven, Git, Deploy to Container),
-                        configured JDK and Maven tools</li>
-                    <li><strong>Source Code Management:</strong> Connected Jenkins to GitHub repository</li>
-                    <li><strong>Maven Build:</strong> Successfully compiled Java code and created WAR file
-                        (hello-world.war)</li>
-                    <li><strong>Tomcat Deployment:</strong> Automatically deployed WAR to Tomcat server at port 8080
-                    </li>
-                    <li><strong>SSH Integration:</strong> Established passwordless authentication between Ansible and
-                        all target nodes</li>
+                    <li>Configure Jenkins job for Maven build</li>
+                    <li>Verify WAR file generation</li>
+                    <li>Deploy to standalone Tomcat server</li>
                 </ul>
-                <p><strong>Result:</strong> Application is live at
-                    <code>http://&lt;Tomcat-IP&gt;:8080/hello-world/</code>
-                </p>
             </div>
         </div>
 
-        <!-- Stage 2: COMPLETED -->
-        <div class="stage">
+        <!-- Stage 2: PENDING -->
+        <div class="stage pending">
             <div class="stage-header">
                 <div class="stage-number">2</div>
                 <div class="stage-title">Docker Containerization</div>
-                <span class="status-badge">✓ COMPLETED</span>
+                <span class="status-badge pending">PENDING</span>
             </div>
             <div class="stage-details">
-                <p><strong>What we accomplished:</strong></p>
+                <p><strong>Next steps:</strong></p>
                 <ul>
-                    <li><strong>Dockerfile Creation:</strong> Created multi-stage Dockerfile for optimized building and
-                        deployment</li>
-                    <li><strong>Jenkins Integration:</strong> Added Docker build, tag, and push steps to the CI/CD
-                        pipeline</li>
-                    <li><strong>Docker Hub:</strong> Successfully pushed versioned and 'latest' images to Docker Hub
-                    </li>
-                    <li><strong>Manual Deployment:</strong> Verified container execution on the Docker Host server</li>
-                    <li><strong>Tomcat optimization:</strong> Fixed deployment conflicts by cleaning the webapps
-                        directory in the Docker image</li>
+                    <li>Create multi-stage Dockerfile</li>
+                    <li>Push image to Docker Hub from Jenkins</li>
+                    <li>Verify container execution on Docker Host</li>
                 </ul>
             </div>
         </div>
 
-        <!-- Stage 3: COMPLETED -->
-        <div class="stage">
+        <!-- Stage 3: PENDING -->
+        <div class="stage pending">
             <div class="stage-header">
                 <div class="stage-number">3</div>
                 <div class="stage-title">Ansible Automation</div>
-                <span class="status-badge">✓ COMPLETED</span>
+                <span class="status-badge pending">PENDING</span>
             </div>
             <div class="stage-details">
-                <p><strong>What we accomplished:</strong></p>
+                <p><strong>Next steps:</strong></p>
                 <ul>
-                    <li><strong>Inventory Management:</strong> Configured centralized inventory for managing multi-node
-                        deployment</li>
-                    <li><strong>Playbook Automation:</strong> Created YAML playbooks to manage container lifecycle
-                        (Stop, Pull, Run)</li>
-                    <li><strong>Python-Docker Bridge:</strong> Configured Python dependencies on target nodes for
-                        Ansible-Docker communication</li>
-                    <li><strong>One-Click Deployment:</strong> Verified that deployment can be triggered from a central
-                        control node without manual server access</li>
-                    <li><strong>CI/CD Readiness:</strong> Prepared the foundation for Jenkins to trigger Ansible
-                        automatically</li>
+                    <li>Create Ansible playbook for Docker deployment</li>
+                    <li>Automate container lifecycle management</li>
+                    <li>Deploy application using Ansible from Jenkins</li>
                 </ul>
             </div>
         </div>
 
-        <!-- Stage 4: COMPLETED -->
-        <div class="stage">
+        <!-- Stage 4: PENDING -->
+        <div class="stage pending">
             <div class="stage-header">
                 <div class="stage-number">4</div>
                 <div class="stage-title">Kubernetes Orchestration</div>
-                <span class="status-badge">✓ COMPLETED</span>
+                <span class="status-badge pending">PENDING</span>
             </div>
             <div class="stage-details">
-                <p><strong>Final Mission Accomplished:</strong></p>
+                <p><strong>Next steps:</strong></p>
                 <ul>
-                    <li><strong>EKS Cluster Creation:</strong> Successfully provisioned a managed AWS EKS cluster with 2
-                        worker nodes</li>
-                    <li><strong>Cluster Management:</strong> Configured <code>kubectl</code> and <code>eksctl</code> for
-                        professional orchestration</li>
-                    <li><strong>High Availability:</strong> Deployed 3 replicas of the application across multiple
-                        availability zones</li>
-                    <li><strong>Load Balancing:</strong> Exposed the application via an AWS Classic LoadBalancer</li>
-                    <li><strong>Self-Healing:</strong> Configured liveness and readiness checks for automated container
-                        recovery</li>
+                    <li>Provision AWS EKS cluster</li>
+                    <li>Deploy Kubernetes manifests</li>
+                    <li>Expose application via LoadBalancer</li>
                 </ul>
             </div>
         </div>
