@@ -109,12 +109,12 @@
     <div class="container">
         <h1>🚀 DevOps Pipeline - Stage Progress <small>(v3.0 - Ansible Live)</small></h1>
 
-        <!-- Stage 1: PENDING -->
-        <div class="stage pending">
+        <!-- Stage 1: COMPLETED -->
+        <div class="stage">
             <div class="stage-header">
                 <div class="stage-number">1</div>
                 <div class="stage-title">Maven Build & Tomcat Deployment</div>
-                <span class="status-badge pending">PENDING</span>
+                <span class="status-badge">COMPLETED</span>
             </div>
             <div class="stage-details">
                 <p><strong>Next steps:</strong></p>
@@ -126,12 +126,12 @@
             </div>
         </div>
 
-        <!-- Stage 2: PENDING -->
-        <div class="stage pending">
+        <!-- Stage 2: ACTIVE -->
+        <div class="stage">
             <div class="stage-header">
                 <div class="stage-number">2</div>
                 <div class="stage-title">Docker Containerization</div>
-                <span class="status-badge pending">PENDING</span>
+                <span class="status-badge">ACTIVE</span>
             </div>
             <div class="stage-details">
                 <p><strong>Next steps:</strong></p>
