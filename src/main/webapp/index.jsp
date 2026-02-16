@@ -143,7 +143,7 @@
             </div>
         </div>
 
-        <!-- Stage 3: PENDING -->
+        <!-- Stage 3: COMPLETED -->
         <div class="stage pending">
             <div class="stage-header">
                 <div class="stage-number">3</div>
