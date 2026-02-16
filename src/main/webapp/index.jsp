@@ -126,12 +126,12 @@
             </div>
         </div>
 
-        <!-- Stage 2: ACTIVE -->
+        <!-- Stage 2: COMPLETED -->
         <div class="stage">
             <div class="stage-header">
                 <div class="stage-number">2</div>
                 <div class="stage-title">Docker Containerization</div>
-                <span class="status-badge">ACTIVE</span>
+                <span class="status-badge">COMPLETED</span>
             </div>
             <div class="stage-details">
                 <p><strong>Next steps:</strong></p>
@@ -144,11 +144,15 @@
         </div>
 
         <!-- Stage 3: COMPLETED -->
+<<<<<<< HEAD
         <div class="stage pending">
+=======
+        <div class="stage">
+>>>>>>> 1a24717 (Correct Status Page: Stage 3 COMPLETED, Stage 4 ACTIVE)
             <div class="stage-header">
                 <div class="stage-number">3</div>
                 <div class="stage-title">Ansible Automation</div>
-                <span class="status-badge pending">PENDING</span>
+                <span class="status-badge">COMPLETED</span>
             </div>
             <div class="stage-details">
                 <p><strong>Next steps:</strong></p>
@@ -160,12 +164,12 @@
             </div>
         </div>
 
-        <!-- Stage 4: PENDING -->
-        <div class="stage pending">
+        <!-- Stage 4: ACTIVE -->
+        <div class="stage">
             <div class="stage-header">
                 <div class="stage-number">4</div>
                 <div class="stage-title">Kubernetes Orchestration</div>
-                <span class="status-badge pending">PENDING</span>
+                <span class="status-badge">ACTIVE</span>
             </div>
             <div class="stage-details">
                 <p><strong>Next steps:</strong></p>
